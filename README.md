@@ -7,9 +7,9 @@
 4.git pull origin master                                 
 
 --How to download--
-1.git pull 
+1.git pull origin master
 
 --How to upload
 1.git add *
 2.git commit -am "Write Data/Time and comment here"
-3.git push
+3.git push  //if you can't , write "git push origin master" 
