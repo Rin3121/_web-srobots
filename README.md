@@ -2,7 +2,7 @@
 
 ##--At first--  
 1.make a directory on your PC  
-2.open terminal or commandline, go the directory  
+2.open terminal or command-line, go the directory  
 3.git clone https://github.com/Rin3121/_web-srobots.git   //copy remote repository to local repository  
 4.git pull origin master  
 
