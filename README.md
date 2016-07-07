@@ -1,6 +1,6 @@
 # _web-srobots
 
---At first--
+--At first--  
 1.make a directory on your PC  
 2.open terminal or commandline, go the directory  
 3.git clone https://github.com/Rin3121/_web-srobots.git   //copy remote repository to local repository  
