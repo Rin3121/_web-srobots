@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
 
-    <title>Sociable_robots</title>
+
+
+    <title>Member</title>
 
 
 
@@ -13,7 +15,8 @@
 <link rel="stylesheet" href="css/layouts/src.css">
 <link rel="stylesheet" href="css/layouts/src_new.css">
 <link rel="stylesheet" href="css/layouts/mem.css">
-
+<script src="jquery.js"></script>
+<script src="masonry-docs.min.js"></script>
 
 
 
@@ -24,13 +27,18 @@
         <link rel="stylesheet" href="side-menu.css">
     <!--<![endif]-->
 
-
-
-
-
-
-
 </head>
+
+<script>
+$(function(){
+$('#masonry').masonry({
+	itemSelector: '.grid',
+	isFitWidth: true,
+	isAnimated: true
+});
+});
+</script>
+
 <body>
 <div id="layout">
     <!-- Menu toggle -->
@@ -41,81 +49,72 @@
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">Srobot</a>
+            <a class="pure-menu-heading" href="Top.html">Member</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Top</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-
-                <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-                    <a href="#" class="pure-menu-link">Projects</a>
-                </li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Publish</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+                <li class="pure-menu-item"><a href="About.html" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="Projects.html" class="pure-menu-link">Projects</a></li>
+                <li class="pure-menu-item"><a href="Member.html" class="pure-menu-link">Member</a></li>
+                <li class="pure-menu-item"><a href="Join.html" class="pure-menu-link">Join</a></li>
+                <li class="pure-menu-item"><a href="Contact.html" class="pure-menu-link">Contact</a></li>
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div class="header">
-            <h1>Sociable Robots</h1>
+            <h1>Memeber</h1>
             <h2>Robot, Augmented Humans and their Interection</h2>
         </div>
 </div>
+
+
+
         <div class="content">
-          <div class="a">
-            <h1>member</h1>
-<br clear="both"/>
-<figure style="float:left; margin: 40px;">
-<img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_01.png" alt="kaz" width="180px" border="0"/>
-<figcaption>kaz<br>高汐一紀<br>環境情報学部准教授</figcaption>
-</figure>
+          <div id="masonry">
 
-<figure style="float:left; margin: 40px;">
-<img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_02.png" alt="tisbee"  width="180px" border="0"/>
-<figcaption>tisbee<br>樫井愛<br>環境情報学部　3年</figcaption>
-</figure>
+          	<div class="grid">
+              <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_01.png" alt="kaz" width="180px" border="0"/>
+            <br>kaz<br>高汐一紀<br>環境情報学部准教授
+            </div>
 
+          	<div class="grid">
+              <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_02.png" alt="tisbee"  width="180px" border="0"/>
+              <br>tisbee<br>樫井愛<br>環境情報学部　3年
+            </div>
 
-<figure style="float:left; margin: 40px;">
-<img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_03.png" alt="tomato" width="180px"  border="0" />
-<figcaption>tomato<br>上村朋子<br>総合政策学部　4年</figcaption>
-</figure>
+          	<div class="grid">
+              <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_03.png" alt="tomato" width="180px"  border="0" />
+              <br>tomato<br>上村朋子<br>総合政策学部　4年
+            </div>
 
-
-<br clear="both"/>
-
-
-            <figure class="gazo-box">
+            <div class="grid">
               <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_04.png" alt="viol" width="180px"  border="0" />
-              <figcaption>viol<br>佐々木嘉子<br>環境情報学部　３年</figcaption>
-　　　　　　　　</figure>
+              <br>viol<br>佐々木嘉子<br>環境情報学部　３年
+            </div>
 
-             <figure class="gazo-box">
+            <div class="grid">
               <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_05.png" alt="akira" width="180px"  border="0" />
-              <figcaption>ak1ra<br>真島大樹<br>環境情報学部　２年</figcaption>
-　　　　　　　　</figure>
+              <br>ak1ra<br>真島大樹<br>環境情報学部　２年
+            </div>
 
-              <figure class="gazo-box">
+            <div class="grid">
               <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_06.png" alt="nago"  width="180px" border="0" />
-              <figcaption>nago<br>川那子進太郎<br>環境情報学部　３年</figcaption>
-              </figure>
-<br clear="both"/>
-              <figure class="gazo-box">
-                <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_08.png" alt="ramp" width="180px"   border="0" />
-                <figcaption>ramp<br>宮本凜太郎<br>環境情報学部　２年</figcaption>
-                </figure>
+              <br>nago<br>川那子進太郎<br>環境情報学部　３年</br>
+            </div>
 
-                <figure class="gazo-box">
-                  <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_09.png" alt="theramin"  width="180px"  border="0" />
-                  <figcaption>theramin<br>堀江拓実<br>環境情報学部　２年</figcaption>
-                </figure>
-                <br clear="both"/>
-              </div>
-</div>
+            <div class="grid">
+              <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_08.png" alt="ramp" width="180px"   border="0" />
+              <br>ramp<br>宮本凜太郎<br>環境情報学部　２年
+            </div>
 
+            <div class="grid">
+              <img src="/Users/tomoko/Desktop/web/_web-srobots/_web-srobots/web/photo/mem_09.png" alt="theramin"  width="180px"  border="0" />
+              <br>theramin<br>堀江拓実<br>環境情報学部　２年
+            </div>
 
-    </div>
+          </div>
+        </div>
 
 
 
