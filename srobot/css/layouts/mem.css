@@ -1,0 +1,17 @@
+  #masonry {
+  width:100%;
+  padding:10px;
+  /*border:1px solid #EEE;*/
+  overflow:auto;
+  }
+
+  .grid {
+  width:220px;
+  margin:10px;
+  padding:10px;
+  /*background: #000000;*/
+  float:left;
+  /*color:#fff;*/
+  display: inline;;
+
+  }

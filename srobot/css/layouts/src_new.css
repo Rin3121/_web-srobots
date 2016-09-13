@@ -1,0 +1,116 @@
+/*thick border*/
+.border{
+  padding-bottom:10px;
+  border-bottom:3px solid #C0C0C0;
+}
+
+/*thin border*/
+.border2{
+  padding-bottom:8px;
+  border-bottom:1px solid #C0C0C0;
+}
+
+/*for picture position down*/
+.sub{
+  margin-top:26px;
+}
+
+/*indent*/
+.ind{
+  padding-left: 1.5em;
+}
+
+/*for url of publication in Projects*/
+.tx{
+  font-size:70%;
+  padding-left: 4em;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+/*for hide point of list*/
+li{
+  list-style-type: none;
+}
+
+/*for emphasis sidemenu*/
+.side_strong{
+  background-color:#1f8dd6;
+  color:#ffffff;
+  outline: #1f8dd6;
+}
+
+/*for sidemenu normal*/
+.side{
+  color:#777;
+  outline:#777;
+}
+
+/*for sidemenu heading*/
+.heading{
+  font-size:120%;
+}
+
+.img-center{
+  text-align: center;
+}
+
+/* .viewer
+------------------------- */
+.viewer {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.viewer ul {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.viewer ul li {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+}
+.viewer ul li img {
+    width: 100%;
+}
+
+/* sideNavi
+------------------------- */
+.viewer .btnPrev,
+.viewer .btnNext {
+    margin-top: -25px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 101;
+}
+.viewer .btnPrev {
+    left: 10px;
+    background: #ccc url(../img/btnPrev.jpg) no-repeat center center;
+}
+.viewer .btnNext {
+    right: 10px;
+    background: #ccc url(../img/btnNext.jpg) no-repeat center center;
+}
+
+
+/* =======================================
+    ClearFixElements
+======================================= */
+.viewer ul:after {
+    content: ".";
+    height: 0;
+    clear: both;
+    display: block;
+    visibility: hidden;
+}
+
+.viewer ul {
+    display: inline-block;
+    overflow: hidden;
+}

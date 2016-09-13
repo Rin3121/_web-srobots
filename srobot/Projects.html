@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Projects</title>
+
+
+
+
+<link rel="stylesheet" href="css/layouts/src.css">
+<link rel="stylesheet" href="css/layouts/src_new.css">
+<link rel="stylesheet" href="css/layouts/movie-wrap.css">
+
+
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <!--<a class="pure-menu-heading" href="index.html">Srobot</a>-->
+
+            <ul class="pure-menu-list">
+              <li class="pure-menu-item"><a href="index.html" class="pure-menu-link side heading">Srobot</a></li>
+              <li class="pure-menu-item"><a href="About.html" class="pure-menu-link side">About</a></li>
+              <li class="pure-menu-item "><a href="Projects.html" class="pure-menu-link side_strong">Projects</a></li>
+              <li class="pure-menu-item"><a href="Member.html" class="pure-menu-link side">Member</a></li>
+              <li class="pure-menu-item"><a href="Contact.html" class="pure-menu-link side">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Projects</h1>
+            <h2>研究成果</h2>
+          <!--  <h2>/subtitle/</h2>-->
+        </div>
+
+        <div class="content">
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                  <h2 class="border">2016</h2>
+                   <div class="ind">
+                    <h3 class="border2">Wip</h3>
+                     <p><strong>■ パーソナルバルーンロボット : viol</strong></p>
+                       <p class="ind">人 の目線の高さを維持しつつ、ロボットの軽量化、三次元 空間を利用したロボットの置き場をを可能とするため、バルーンを用いたパーソナルロボットを考えた。今回は二輪車を用いた制御方法を考えた。</p>
+
+                     <p><strong>■ MoNADによる鏡像認知ロボットのMindstorm EV3における実装 : nago</strong></p>
+                       <p class="ind">ロボット制作の学習を目的とし、参考書をもとに、鏡に写った像を自身だと判断できる鏡像認知ロボットをMindstorms EV3上に実装し、鏡像認知実験を行った。また、見真似行動を遺伝的アルゴリズムによって学習するプログラムのプロトタイプを制作した。</p>
+
+                     <p><strong>■ スキンシップの記録・再現 : ak1ra</strong></p>
+                       <p class="ind">スキンシップのような原始的なコミュニケーションは、親しさや安心感を伝えられるが、相手が実在し、触れることができる距離にいることが前提である。スキンシップの動作をセンサーで記録し、それをアクチュエーターなどで再現するシステムの実装を目指す。</p>
+
+                     <p><strong>■ 対話者のTweet履歴に基づく動的話題生成 : theramin</strong></p>
+                       <p class="ind">現状では対話者の任意の発話に対する適切な応答の生成は未だ困難である。システムによる話題の制 御は応答の生成を易化するが、対話者の積極性を損なう危険性がある。本研究では Tweet 履歴から対話者 の話しやすい話題を推定及び誘導することで、話者の積極性と応答生成の易化の両立を目指す。</p>
+
+                     <p><strong>■ 床デバイスによる酩酊者検知 : ramp</strong></p>
+                       <p class="ind">近年、駅のホームでの事故が多発しており、そのなかでも、酩酊者による事故が多発している。本研究では、酩酊者がホームから転落するのを防止するシステムの作成を目標にしている。今回はその第1歩となる研究として、床デバイスを用いた歩行者の検出を試みる。</p>
+
+                    <h3 class="border2">Term</h3>
+                     <p><strong>■ 人工物の物理的インタラクションによる行動の誘導への印象 : tomato</strong></p>
+                       <p class="ind">人工物は、物理的インタラクションをすることで、既存の人工物と比べ、人間をよりストレスの少ない状態で、目的とする行動へと誘導することができるかどうかを、検証した。今回は、人間の作業を物理的に妨げ、休憩に誘導するキーボードを実装、使用、評価することで検証した。</p>
+
+                   </div>
+
+                  <h2 class="border">Publications</h2>
+                     <p class="ind"><strong>■ Expression Amplifying Robot -会話の中での表現力を増強するロボット- : tisbee</strong></p>
+                     <p class="ind">概要：現在，様々なタイプのロボットが，あるものはコミュニケーションパートナとして，またあるものは労働力として，我々の日常生活を支えてくれている．コミュニケーションを支援するロボットの種類は多く，アバタ（アイデンティティの象徴）として機能するものもあれば，それ自身が会話相手として振る舞うロボットもある．本稿で我々は，H2Hのコミュニケーションを補助するロボットシステムEx-Ampを提案する。</p>
+                     <a class="tx" href="http://www.ieice.org/ken/program/index.php?tgs_regid=8bcc13a4456e7b262f1afa065096359b97aa835d36006007bb480cb1b95fd070&tgid=IEICE-CNR&lang=">一般社団法人 電子情報通信学会 THE INSTITUTE OF ELECTRONICS, INFORMATION AND COMMUNICATION ENGINEERS</a>
+
+                     <p class="ind"><strong>■ Ex-Amp Robot: Physical Avatar for Enhancing Human to Human Communication : tisbee</strong></p>
+                     <p class="ind">概要：Our research focuses on creating a robotic system that aids human-to-human communication. The robot acts as a personal companion that understands the user’s emotions and helps express them alongside the user. First, the user’s facial expression is detected through a connected camera device and relays the retrieved information to a humanoid robot. The humanoid robot then performs physical gestures that match the detected emotion. By using this system, those who are unable to freely move their own bodies can add a physical component to their communication method. In this paper, we have determined the efficacy of translating detected facial expressions into robot movements. Through experiments and surveys, we determined whether our proposed ‘Ex-Amp Robot’ helped enhance the communication of a hypothetically tetraplegic user.</p>
+                     <a class="tx" href="http://hai-conference.net/hai2016/programme/technical-program/">International Conference on Human-Agent Interaction</a>
+
+                     <p class="ind"><strong>■ Robot Avatar for Enhancing the Communication of Physically Disabled Humans : tisbee</strong></p>
+                     <p class="ind">概要：The robot avatar proposed in this paper is a personal companion that captures users’ facial expressions and translates retrieved emotion data into gestures best suited to express the user’s emotion in real-time. This robot allows users to enjoy physical aspects of communication, as well as put an impact on parts of conversations to raise conversation quality. In this research, we have conducted experiments to validate the efficacy of translating facial expressions into robot movements.</p>
+                     <a class="tx" href="https://ras.papercept.net/conferences/conferences/ROMAN16/program/ROMAN16_ContentListWeb_2.html#suidvs">25th IEEE International Symposium on Robot and Human Interactive Communication</a>
+
+                  <h2 class="border">Other</h2>
+                     <a href="http://vu.sfc.keio.ac.jp/faculty_profile/cgi/f_profile.cgi?id=a464a3ec55ed9a77" class="ind">Kazunori Takashio</a>
+
+                  <h2 class="content-subhead border">Empathetic H2R Interaction -ヒトやロボットに共感するロボットたち</h2>
+                  <div class="movie-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/piztxBJ0kdY" frameborder="0" allowfullscreen ></iframe>
+                  </div>
+
+                   <p>“Making Robots more Sociable”，ミュンヘン工科大学 Gordon Cheng 教授の言葉です．人とロボット，ロボット同士のインタラクションにおいて，ロボットに求められる「社会性」とはどのようなものでしょうか．このプロジェクトでは，周囲の状況と相手の情動を感覚として理解し，どのような表情で相手に向き合うかを，ロボットの立場でデザインしています．
+
+このデモンストレーションでは，人やロボットに共感してくれるロボットたちが登場します．人が落ち込んでいれば話しを聞いて一緒に落ち込んでくれる，落ち込んでいる人を2台で褒めて励ましてくれる，そんなロボットたちです．
+
+ユビキタス情報空間，新たな人（身体）のカタチ，ソーシャブルなロボットたち，そしてそれらが三位一体となったインタラクションをご覧ください</p>
+
+                  <h2 class="content-subhead border">cookpepper</h2>
+                  <div class="movie-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n1veEJFxKdg" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
+                   <p>cookpepperは日々の料理の手助けするアプリです。Pepperに食材を見せながら、オンラインのリソースを活用しつつ、食材に合った今日の献立を相談できます。レシピをタブレットへ表示してくれるだけでなく、Pepperが手取り足取り（？）調理手順を教えてくれるので、料理が一層楽しくなります。最後にはPepperから素敵なプレゼントがあります。</p>
+
+                  <h2 class="content-subhead border">一期一会</h2>
+                  <div class="movie-wrap">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mYdPbclhbiY" frameborder="0" allowfullscreen></iframe>
+                  </div>
+
+                   <p>2015年度　ORF展示作品</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Sociable Robots Lab</title>
+
+<link rel="stylesheet" href="css/layouts/src.css">
+<link rel="stylesheet" href="css/layouts/src_new.css">
+
+<script src="js/jquery.js"></script>
+<!--フェード用 ---------------------------------------------------------->
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+    $(window).load(function(){
+        var setElm = $('.viewer'),
+        setMaxWidth = 800,
+        setMinWidth = 480,
+        fadeSpeed = 2000,
+        switchDelay = 5000,
+        sideNavi = 'off', // 'on' or 'off'
+        sideHide = 'hide', // 'hide' or 'show'
+        naviOpc = 0.5;
+
+        setElm.each(function(){
+            var targetObj = $(this),
+            findUl = targetObj.find('ul'),
+            findLi = targetObj.find('li'),
+            findLiFirst = targetObj.find('li:first');
+
+            findLi.css({display:'block',opacity:'0',zIndex:'99'});
+            findLiFirst.css({zIndex:'100'}).stop().animate({opacity:'1'},fadeSpeed);
+
+            function timer(){
+                setTimer = setInterval(function(){
+                    slideNext();
+                },switchDelay);
+            }
+            timer();
+
+            function slideNext(){
+                findUl.find('li:first-child').not(':animated').animate({opacity:'0'},fadeSpeed).next('li').css({zIndex:'100'}).animate({opacity:'1'},fadeSpeed).end().appendTo(findUl).css({zIndex:'99'});
+            }
+            function slidePrev(){
+                findUl.find('li:first-child').not(':animated').css({zIndex:'99'}).animate({opacity:'0'},fadeSpeed).siblings('li:last-child').css({zIndex:'100'}).animate({opacity:'1'},fadeSpeed).prependTo(findUl);
+            }
+            targetObj.css({width:setMaxWidth,display:'block'});
+
+            // メイン画像をベースにエリアの幅と高さを設定
+            var setLiImg = findLi.find('img'),
+            baseWidth = setLiImg.width(),
+            baseHeight = setLiImg.height();
+
+            // レスポンシブ動作メイン
+            function imgSize(){
+                var windowWidth = parseInt($(window).width());
+                if(windowWidth >= setMaxWidth) {
+                    targetObj.css({width:setMaxWidth,height:baseHeight});
+                    findUl.css({width:baseWidth,height:baseHeight});
+                    findLi.css({width:baseWidth,height:baseHeight});
+                } else if(windowWidth < setMaxWidth) {
+                    if(windowWidth >= setMinWidth) {
+                        targetObj.css({width:'100%'});
+                        findUl.css({width:'100%'});
+                        findLi.css({width:'100%'});
+                    } else if(windowWidth < setMinWidth) {
+                        targetObj.css({width:setMinWidth});
+                        findUl.css({width:setMinWidth});
+                        findLi.css({width:setMinWidth});
+                    }
+                    var reHeight = setLiImg.height();
+                    targetObj.css({height:reHeight});
+                    findUl.css({height:reHeight});
+                    findLi.css({height:reHeight});
+                }
+            }
+            $(window).resize(function(){imgSize();}).resize();
+
+            // サイドナビボタン（有り無し）
+            var agent = navigator.userAgent;
+            if(sideNavi == 'on'){
+                targetObj.append('<a href="javascript:void(0);" class="btnPrev"></a><a href="javascript:void(0);" class="btnNext"></a>');
+                var btnPrev = targetObj.find('.btnPrev'),btnNext = targetObj.find('.btnNext'),btnPrevNext = targetObj.find('.btnPrev,.btnNext');
+
+                if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 || agent.search(/Android/) != -1){
+                    btnPrevNext.css({opacity:naviOpc});
+                } else {
+                    btnPrevNext.css({opacity:naviOpc}).hover(function(){
+                        $(this).stop().animate({opacity:naviOpc+0.2},200);
+                    },function(){
+                        $(this).stop().animate({opacity:naviOpc},200);
+                    });
+                }
+
+                if(sideHide == 'hide'){
+                    if(agent.search(/iPhone/) != -1 || agent.search(/iPad/) != -1 || agent.search(/iPod/) != -1 || agent.search(/Android/) != -1){
+                        btnPrevNext.css({visibility:'visible'});
+                    } else {
+                        btnPrevNext.css({visibility:'hidden'});
+                        targetObj.hover(function(){
+                            btnPrevNext.css({visibility:'visible'});
+                        },function(){
+                            btnPrevNext.css({visibility:'hidden'});
+                        });
+                    }
+                }
+
+                btnPrev.click(function(){switchPrev();});
+                btnNext.click(function(){switchNext();});
+            }
+
+            // ボタン移動動作
+            function switchNext(){
+                findLi.not(':animated').parents('ul').each(function(){
+                    clearInterval(setTimer);
+                    slideNext();
+                    timer();
+                });
+            }
+            function switchPrev(){
+                findLi.not(':animated').parents('ul').each(function(){
+                    clearInterval(setTimer);
+                    slidePrev();
+                    timer();
+                });
+            }
+
+        });
+    });
+});
+</script>< -->
+<!--　---------------------------------------------------------------->
+
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+
+
+
+
+
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <!--<a class="pure-menu-heading" href="index.html">Srobot</a>-->
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link side_strong heading">Srobot</a></li>
+                <li class="pure-menu-item"><a href="About.html" class="pure-menu-link side" >About</a></li>
+                <li class="pure-menu-item"><a href="Projects.html" class="pure-menu-link side">Projects</a></li>
+                <li class="pure-menu-item"><a href="Member.html" class="pure-menu-link side">Member</a></li>
+                <li class="pure-menu-item"><a href="Contact.html" class="pure-menu-link side">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Sociable Robots Lab</h1>
+            <h2>Robot, Augmented Humans and their Interection</h2>
+        </div>
+
+        <div class="content">
+            <div class="pure-g sub">
+                <div class="pure-u-1-1 img-center" >
+                    <img class="pure-img-responsive" src="photo/5.png" id="IMG" alt="Pepper" >
+                </div>
+                <div class="pure-u-1-5">
+                    <img class="pure-img-responsive" src="photo/1.png" id = "1" alt="nao1" onclick = "showimage(this)">
+                </div>
+                <div class="pure-u-1-5">
+                    <img class="pure-img-responsive" src="photo/2.png" id = "2" alt="Pepper+human" onclick = "showimage(this)">
+                </div>
+                <div class="pure-u-1-5">
+                    <img class="pure-img-responsive" src="photo/3.png" id = "3" alt="nao2" onclick = "showimage(this)">
+                </div>
+                <div class="pure-u-1-5">
+                    <img class="pure-img-responsive" src="photo/4.png" id = "4" alt="nao3" onclick = "showimage(this)">
+                </div>
+                <div class="pure-u-1-5">
+                    <img class="pure-img-responsive" src="photo/5.png" id = "5" alt="Pepper" onclick = "showimage(this)">
+                </div>
+            </div>
+            <!-- フェード用  >
+            <div class="viewer">
+              <ul>
+                <li><img src="photo/5.png" alt="nao1"></li>
+                <li><img src="photo/1.png" alt="Pepper+human"></li>
+                <li><img src="photo/2.png" alt="nao2"></li>
+                <li><img src="photo/3.png" alt="nao3"></li>
+                <li><img src="photo/4.png" alt="Pepper"></li>
+              </ul>
+            </div><!--/.viewer-->
+        <!--</div>
+        </div>-->
+
+
+            <h2 class="content-subhead">お知らせ</h2>
+                <li>2016年08月24日(水)~25日(木) : <a href="http://www.sfc.keio.ac.jp/admissions/camp.html">未来構想キャンプ【滞在型】</a></li>
+                <li>2016年11月18日(金)~19日(土) : <a href="http://orf.sfc.keio.ac.jp/2016/">慶応義塾大学 SFC OPEN RESERCH FORUM 2016</a></li>
+        </div>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
+</body>
+</html>
